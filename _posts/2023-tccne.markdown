@@ -6,7 +6,7 @@ image: /images/tccne.png
 categories: research
 # author: "Leo Keselman"
 authors: "Hao Xiaong, <strong>Yiyang Ling</strong>, Junchi Yan"
-venue: "in submission"
+venue: "arxiv"
 # arxiv: https://arxiv.org/abs/2308.14737
 # code: https://github.com/leonidk/fmb-plus
 # website: https://leonidk.github.io/fmb-plus
