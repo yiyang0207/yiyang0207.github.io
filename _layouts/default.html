@@ -88,14 +88,14 @@
               <em>{{post.venue}}</em>
               <!-- , {{ post.date | date: "%Y" }} -->
               <br>
-              {% if post.website %}
-              <a href="{{post.website}}">website</a> /
-              {% endif %}
               {% if post.arxiv %}
-              <a href="{{post.arxiv}}">arxiv</a> /
+              <a href="{{post.arxiv}}">arxiv</a>{% if post.website or post.video or post.code %} /{% endif %}
+              {% endif %}
+              {% if post.website %}
+              <a href="{{post.website}}">website</a>{% if post.video or post.code %} /{% endif %}
               {% endif %}
               {% if post.video %}
-              <a href="{{post.video}}">video</a> /
+              <a href="{{post.video}}">video</a>{% if post.code %} /{% endif %}
               {% endif %}
               {% if post.code %}
               <a href="{{post.code}}">code</a> 
@@ -171,34 +171,34 @@
 
               <br>
               {% if post.website %}
-              <a href="{{post.website}}">website</a> /
+              <a href="{{post.website}}">website</a>{% if post.paper or post.patent or post.patent2 or post.patent3 or post.video or post.video2 or post.code or post.poster or post.slides %} /{% endif %}
               {% endif %}
               {% if post.paper %}
-              <a href="{{post.paper}}">paper</a> /
+              <a href="{{post.paper}}">paper</a>{% if post.patent or post.patent2 or post.patent3 or post.video or post.video2 or post.code or post.poster or post.slides %} /{% endif %}
               {% endif %}
               {% if post.patent %}
-              <a href="{{post.patent}}">patent</a> /
+              <a href="{{post.patent}}">patent</a>{% if post.patent2 or post.patent3 or post.video or post.video2 or post.code or post.poster or post.slides %} /{% endif %}
               {% endif %}
               {% if post.patent2 %}
-              <a href="{{post.patent2}}">patent #2</a> /
+              <a href="{{post.patent2}}">patent #2</a>{% if post.patent3 or post.video or post.video2 or post.code or post.poster or post.slides %} /{% endif %}
               {% endif %}
               {% if post.patent3 %}
-              <a href="{{post.patent3}}">patent #3</a> /
+              <a href="{{post.patent3}}">patent #3</a>{% if post.video or post.video2 or post.code or post.poster or post.slides %} /{% endif %}
               {% endif %}
               {% if post.video %}
-              <a href="{{post.video}}">video</a> /
+              <a href="{{post.video}}">video</a>{% if post.video2 or post.code or post.poster or post.slides %} /{% endif %}
               {% endif %}
               {% if post.video2 %}
-              <a href="{{post.video2}}">video #2</a> /
+              <a href="{{post.video2}}">video #2</a>{% if post.code or post.poster or post.slides %} /{% endif %}
               {% endif %}
               {% if post.code %}
-              <a href="{{post.code}}">code</a> /
+              <a href="{{post.code}}">code</a>{% if post.poster or post.slides %} /{% endif %}
               {% endif %}
               {% if post.poster %}
-              <a href="{{post.poster}}">poster</a> /
+              <a href="{{post.poster}}">poster</a>{% if post.slides %} /{% endif %}
               {% endif %}
               {% if post.slides %}
-              <a href="{{post.slides}}">slides</a> /
+              <a href="{{post.slides}}">slides</a>
               {% endif %}
               <p></p>
               {{ post.excerpt }}
@@ -239,4 +239,3 @@
 </body>
 
 </html>
-
