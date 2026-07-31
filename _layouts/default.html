@@ -49,10 +49,9 @@
                 <a target="_blank" href="mailto:lingyiya@usc.edu"> Email</a> &nbsp;/&nbsp;
                 <a href="https://github.com/yiyang0207">GitHub</a> &nbsp;/&nbsp;
                 <a href="https://scholar.google.com/citations?user=OZ2MxEYAAAAJ">Google Scholar</a> &nbsp;/&nbsp;
-                <a href="https://twitter.com/yiyang_ling">Twitter</a> &nbsp;
-                <!-- <a href="https://yiyang0207.github.io/pdfs/Resume.pdf">CV</a> &nbsp; -->
-                <!-- /&nbsp; -->
-                <!-- <a href="https://www.linkedin.com/in/lkeselman"> LinkedIn </a> -->
+                <a href="https://twitter.com/yiyang_ling">Twitter</a> &nbsp;/&nbsp;
+                <!-- <a href="https://yiyang0207.github.io/pdfs/Resume.pdf">CV</a> &nbsp;/&nbsp; -->
+                <a href="https://www.linkedin.com/in/yiyang-ling-38b424287/"> LinkedIn </a>
               </p>
             </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
@@ -89,6 +88,9 @@
               <em>{{post.venue}}</em>
               <!-- , {{ post.date | date: "%Y" }} -->
               <br>
+              {% if post.website %}
+              <a href="{{post.website}}">website</a> 
+              {% endif %}
               {% if post.arxiv %}
               <a href="{{post.arxiv}}">arxiv</a> /
               {% endif %}
@@ -103,9 +105,6 @@
               {% endif %}
               {% if post.slides %}
               <a href="{{post.slides}}">slides</a> /
-              {% endif %}
-              {% if post.website %}
-              <a href="{{post.website}}">website</a> 
               {% endif %}
               {% if post.youtube %}
               <a href="{{post.youtube}}">youtube</a> /
